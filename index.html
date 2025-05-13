@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Innovate – Kunst</title>
+  <link rel="stylesheet" href="kunst.css" />
+</head>
+<body>
+  <header>
+    <h1>AI Innovate – Kunst</h1>
+  </header>
+  <main id="kunstModul">
+    <section class="opplasting">
+      <h2>Last opp kunstverk</h2>
+      <input type="file" id="kunstBilde" accept="image/*" />
+      <input type="text" id="kunstTittel" placeholder="Tittel på verket" />
+      <textarea id="kunstBeskrivelse" placeholder="Beskrivelse..."></textarea>
+      <button onclick="lagreKunst()">Lagre</button>
+    </section>
+    <section class="galleri">
+      <h2>Mine kunstverk</h2>
+      <div id="kunstGalleri"></div>
+    </section>
+  </main>
+  <script src="kunst.js"></script>
+</body>
+</html>
