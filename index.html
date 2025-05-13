@@ -1,1 +1,61 @@
-Midlertidig plassholder for index.html
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Innovate</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header>AI Innovate</header>
+    <nav>
+      <button onclick="visSide('innlogging')">Innlogging</button>
+      <button onclick="visSide('profil')">Min profil</button>
+      <button onclick="visSide('rekruttering')">Rekruttering</button>
+      <button onclick="visSide('kunst')">Kunst</button>
+      <button onclick="visSide('jobb')">Jobb</button>
+    </nav>
+
+    <main>
+      <section id="innlogging" class="side">
+        <h2>Logg inn / Registrer</h2>
+        <input id="navn" placeholder="Ditt navn" />
+        <input id="epost" placeholder="E-post (valgfritt)" />
+        <button onclick="loggInn()">Start</button>
+      </section>
+
+      <section id="profil" class="side hidden">
+        <h2>Min profil</h2>
+        <p id="profilinfo"></p>
+      </section>
+
+      <section id="rekruttering" class="side hidden">
+        <h2>Rekrutteringslenke</h2>
+        <p>Del denne lenken og få provisjon:</p>
+        <code id="reflink"></code>
+      </section>
+
+      <section id="kunst" class="side hidden">
+        <h2>Kunstvisning</h2>
+        <img src="https://picsum.photos/400/200" alt="Kunst" />
+        <p>Eksempel på kunst. Mer kommer.</p>
+      </section>
+
+      <section id="jobb" class="side hidden">
+        <h2>Jobb hos oss</h2>
+        <p>Første oppdrag: Rekrutter medlemmer</p>
+        <button onclick="alert('Oppdrag aktivert!')">Start nå</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>

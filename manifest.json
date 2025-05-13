@@ -1,1 +1,15 @@
-Midlertidig plassholder for manifest.json
+{
+  "name": "AI Innovate App",
+  "short_name": "AIInnovate",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0f0f1a",
+  "theme_color": "#00ffe1",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/4184/4184460.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
