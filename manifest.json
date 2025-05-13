@@ -1,0 +1,13 @@
+{
+  "name": "AI Innovate AS",
+  "short_name": "AIInnovate",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffcc00",
+  "icons": [{
+    "src": "https://cdn-icons-png.flaticon.com/512/3209/3209265.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }]
+}

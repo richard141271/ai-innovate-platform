@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Innovate AS – MVP</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>AI Innovate AS</header>
+  <nav>
+    <a href="#" onclick="visSide('registrering')">Registrering</a>
+    <a href="#" onclick="visSide('profil')">Profil</a>
+    <a href="#" onclick="visSide('rekruttering')">Rekruttering</a>
+    <a href="#" onclick="visSide('kunst')">Kunst</a>
+    <a href="#" onclick="visSide('jobb')">Jobb</a>
+  </nav>
+  <div class="container">
+    <div id="registrering" class="side">
+      <h2>Registrering</h2>
+      <input id="navn" placeholder="Fullt navn" />
+      <input id="epost" placeholder="E-post" />
+      <button onclick="registrer()">Registrer</button>
+    </div>
+    <div id="profil" class="side hidden"><h2>Profil</h2><p id="profilinfo"></p></div>
+    <div id="rekruttering" class="side hidden"><h2>Rekruttering</h2><p>Kommer snart: din rekrutteringslenke og provisjon.</p></div>
+    <div id="kunst" class="side hidden"><h2>Kunstgalleri</h2><img src="https://picsum.photos/400/200" alt="Demo-kunst" /></div>
+    <div id="jobb" class="side hidden"><h2>Jobb hos oss</h2><p>Snart kan du ansette deg selv og få betalt via appen.</p></div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
