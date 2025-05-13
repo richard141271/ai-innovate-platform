@@ -3,31 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Innovate AS – MVP</title>
+  <title>AI Innovate</title>
   <link rel="manifest" href="manifest.json" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>AI Innovate AS</header>
   <nav>
-    <a href="#" onclick="visSide('registrering')">Registrering</a>
-    <a href="#" onclick="visSide('profil')">Profil</a>
+    <a href="#" onclick="visSide('innlogging')">Innlogging</a>
+    <a href="#" onclick="visSide('profil')">Min profil</a>
     <a href="#" onclick="visSide('rekruttering')">Rekruttering</a>
     <a href="#" onclick="visSide('kunst')">Kunst</a>
-    <a href="#" onclick="visSide('jobb')">Jobb</a>
+    <a href="#" onclick="visSide('jobb')">Jobb hos oss</a>
   </nav>
+
   <div class="container">
-    <div id="registrering" class="side">
-      <h2>Registrering</h2>
-      <input id="navn" placeholder="Fullt navn" />
-      <input id="epost" placeholder="E-post" />
-      <button onclick="registrer()">Registrer</button>
+    <div id="innlogging" class="side">
+      <h2>Logg inn eller registrer deg</h2>
+      <input id="navn" placeholder="Ditt navn" />
+      <input id="epost" placeholder="E-post (valgfritt)" />
+      <button onclick="loggInn()">Start</button>
     </div>
-    <div id="profil" class="side hidden"><h2>Profil</h2><p id="profilinfo"></p></div>
-    <div id="rekruttering" class="side hidden"><h2>Rekruttering</h2><p>Kommer snart: din rekrutteringslenke og provisjon.</p></div>
-    <div id="kunst" class="side hidden"><h2>Kunstgalleri</h2><img src="https://picsum.photos/400/200" alt="Demo-kunst" /></div>
-    <div id="jobb" class="side hidden"><h2>Jobb hos oss</h2><p>Snart kan du ansette deg selv og få betalt via appen.</p></div>
+
+    <div id="profil" class="side hidden">
+      <h2>Min profil</h2>
+      <p id="profilinfo"></p>
+    </div>
+
+    <div id="rekruttering" class="side hidden">
+      <h2>Rekruttering</h2>
+      <p>Del denne lenken for å verve nye medlemmer:</p>
+      <code id="reflink"></code>
+      <p>Du får provisjon fra 4 ledd.</p>
+    </div>
+
+    <div id="kunst" class="side hidden">
+      <h2>Kunstvisning</h2>
+      <img src="https://picsum.photos/400/200" alt="Kunstdemo" />
+      <p>Dette er et eksempel på NFT-kunst. Mer kommer.</p>
+    </div>
+
+    <div id="jobb" class="side hidden">
+      <h2>Jobb hos oss</h2>
+      <p>Første oppdrag: Verve medlemmer!</p>
+      <button onclick="alert('Oppdrag aktivert!')">Start nå</button>
+    </div>
   </div>
+
   <script src="script.js"></script>
   <script>
     if ('serviceWorker' in navigator) {

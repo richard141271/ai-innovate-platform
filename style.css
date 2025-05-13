@@ -1,28 +1,28 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f9f9f9;
+  background: #f8f8f8;
 }
 header {
-  background-color: #333;
+  background-color: #0f0f1a;
   color: white;
   padding: 15px;
   text-align: center;
   font-size: 24px;
-  font-weight: bold;
 }
 nav {
   display: flex;
   justify-content: space-around;
-  background-color: #555;
+  background-color: #222;
 }
 nav a {
   padding: 12px;
+  display: block;
   color: white;
   text-decoration: none;
 }
 nav a:hover {
-  background-color: #777;
+  background-color: #444;
 }
 .container {
   padding: 20px;
@@ -30,18 +30,23 @@ nav a:hover {
   margin: auto;
 }
 input, button {
+  display: block;
   width: 100%;
   max-width: 400px;
-  padding: 10px;
   margin: 10px 0;
+  padding: 10px;
+  font-size: 1em;
 }
 button {
-  background: #ffcc00;
+  background-color: #00bfa5;
+  color: white;
   border: none;
   font-weight: bold;
   cursor: pointer;
 }
 button:hover {
-  background: #e6b800;
+  background-color: #008e76;
 }
-.hidden { display: none; }
+.hidden {
+  display: none;
+}
