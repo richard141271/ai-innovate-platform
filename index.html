@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Innovate – Kunst</title>
-  <link rel="stylesheet" href="kunst.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Innovate App</title>
+  <style>
+    body {
+      background: #0f0f1a;
+      color: #00ffe1;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    a {
+      color: #00ffe1;
+      text-decoration: none;
+      font-size: 1.2rem;
+      margin: 10px;
+      display: block;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>AI Innovate – Kunst</h1>
-  </header>
-  <main id="kunstModul">
-    <section class="opplasting">
-      <h2>Last opp kunstverk</h2>
-      <input type="file" id="kunstBilde" accept="image/*" />
-      <input type="text" id="kunstTittel" placeholder="Tittel på verket" />
-      <textarea id="kunstBeskrivelse" placeholder="Beskrivelse..."></textarea>
-      <button onclick="lagreKunst()">Lagre</button>
-    </section>
-    <section class="galleri">
-      <h2>Mine kunstverk</h2>
-      <div id="kunstGalleri"></div>
-    </section>
-  </main>
-  <script src="kunst.js"></script>
+  <h1>Velkommen til AI Innovate</h1>
+  <p>Velg en modul:</p>
+  <a href="registrering.html">➤ Registrering</a>
+  <a href="profil.html">➤ Profil</a>
+  <a href="rekruttering.html">➤ Rekruttering</a>
+  <a href="kunst.html">➤ Kunst</a>
+  <a href="jobb.html">➤ Jobb</a>
 </body>
 </html>
