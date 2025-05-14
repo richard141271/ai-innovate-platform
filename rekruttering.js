@@ -1,9 +1,10 @@
 function oppdaterRekruttering() {
   const bruker = JSON.parse(localStorage.getItem("registrertBruker")) || {};
-  const epost = encodeURIComponent(bruker.epost || "ikke_registrert");
+  const epost = encodeURIComponent(bruker.epost || "din@epost.no");
   const vervelenke = `https://aiinnovate.no/?ref=${epost}`;
   document.getElementById("vervLenke").value = vervelenke;
 
+  // Dummy-tall for demo
   const antall = localStorage.getItem("rekruttertAntall") || 3;
   const provisjon = antall * 50;
   const rang = antall >= 20 ? "Mentor" : antall >= 10 ? "Teamleder" : "Medlem";
@@ -20,3 +21,5 @@ function kopierLenke() {
   document.execCommand("copy");
   alert("Lenke kopiert!");
 }
+
+window.onload = oppdaterRekruttering;
