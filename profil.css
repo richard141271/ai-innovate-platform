@@ -1,0 +1,11 @@
+.profil-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #1a1a2e;
+  color: #f0f0f0;
+  border-radius: 8px;
+}
+.profil-container p {
+  margin-bottom: 10px;
+}
