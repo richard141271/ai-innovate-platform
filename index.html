@@ -111,8 +111,19 @@
   <button onclick="visModul('profil')">Profil</button>
   <button onclick="visModul('rekruttering')">Rekruttering</button>
   <button onclick="visModul('kunst')">Kunst</button>
-  <button onclick="alert('Jobbmodul kommer')">Jobb</button>
+  <button onclick="visModul('jobb')">Jobb</button>
 </footer>
+<div id="jobb" class="skjerm">
+<div class="jobb-container">
+  <h2>Jobb hos oss</h2>
+  <p>Som medlem av AI Innovate kan du starte å jobbe umiddelbart.</p>
+  <p>Første oppdrag: <strong>Rekrutter 3 personer</strong></p>
+  <button onclick="startOppdrag()">Start nå</button>
+  <div id="jobbstatus"></div>
+
+  
+</div>
+
 
 <script src="profil.js"></script>
 <script src="rekruttering.js"></script>
