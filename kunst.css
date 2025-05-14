@@ -1,0 +1,41 @@
+.kunst-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #1a1a2e;
+  color: #f0f0f0;
+  border-radius: 8px;
+}
+.kunst-container input,
+.kunst-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  background: #2a2a3d;
+  border: none;
+  border-radius: 5px;
+  color: #f0f0f0;
+}
+.kunst-container button {
+  width: 100%;
+  padding: 10px;
+  background: #00ffe1;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#kunstGalleri img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.bunnmeny {
+  margin-top: 40px;
+  background: #1f1f1f;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid #00ffe1;
+}

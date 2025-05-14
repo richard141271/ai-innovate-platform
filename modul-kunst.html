@@ -1,0 +1,18 @@
+<div class="kunst-container">
+  <h2>Last opp kunstverk</h2>
+  <input type="file" id="filOpplasting" accept="image/*" />
+  <textarea id="beskrivelse" placeholder="Beskrivelse av kunstverket"></textarea>
+  <button onclick="lagreKunst()">Lagre kunst</button>
+  <div id="status"></div>
+
+  <h3>Dine kunstverk</h3>
+  <div id="kunstGalleri"></div>
+
+  <footer class="bunnmeny">
+    <button onclick="visModul('registrering')">Registrering</button>
+    <button onclick="visModul('profil')">Profil</button>
+    <button onclick="visModul('rekruttering')">Rekruttering</button>
+    <button onclick="visModul('kunst')">Kunst</button>
+    <button onclick="visModul('jobb')">Jobb</button>
+  </footer>
+</div>
