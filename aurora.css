@@ -1,0 +1,25 @@
+.aurora-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: linear-gradient(to bottom, #1a1a2e, #121212);
+  color: #f0f0f0;
+  border-radius: 12px;
+}
+.status-boks {
+  background: #2a2a3d;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+.status-boks p {
+  margin: 5px 0;
+}
+.bunnmeny {
+  margin-top: 40px;
+  background: #1f1f1f;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid #00ffe1;
+}
