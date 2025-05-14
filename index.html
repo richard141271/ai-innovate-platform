@@ -2,8 +2,9 @@
 <html lang="no">
 <head>
   <meta charset="UTF-8">
-  <title>AI Innovate – Registrering</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Innovate AS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="profil.css">
   <style>
     body {
       background: #121212;
@@ -11,15 +12,13 @@
       font-family: 'Segoe UI', sans-serif;
       padding-bottom: 100px;
     }
-
-    .registrering-container {
-      max-width: 500px;
+    .registrering-container, .profil-container {
+      max-width: 600px;
       margin: auto;
       padding: 20px;
       background: #1a1a2e;
       border-radius: 8px;
     }
-
     input {
       display: block;
       width: 100%;
@@ -30,7 +29,6 @@
       border-radius: 5px;
       color: #f0f0f0;
     }
-
     button {
       padding: 12px;
       background: #00ffe1;
@@ -40,7 +38,6 @@
       font-weight: bold;
       cursor: pointer;
     }
-
     .bunnmeny {
       position: fixed;
       bottom: 0;
@@ -52,56 +49,74 @@
       justify-content: space-around;
       border-top: 2px solid #00ffe1;
     }
+    .skjerm { display: none; }
+    .vis { display: block; }
   </style>
 </head>
 <body>
 
-<div class="registrering-container">
-  <h2>Bli medlem</h2>
-  <input type="text" id="fornavn" placeholder="Fornavn" />
-  <input type="text" id="etternavn" placeholder="Etternavn" />
-  <input type="email" id="epost" placeholder="E-post" />
-  <input type="text" id="telefon" placeholder="Telefon (valgfritt)" />
-  <input type="text" id="verv" placeholder="Hvem vervet deg?" />
-  <button onclick="registrerBruker()">Registrer meg</button>
-  <div id="status"></div>
+<div id="registrering" class="skjerm vis">
+  <div class="registrering-container">
+    <h2>Bli medlem</h2>
+    <input type="text" id="fornavn" placeholder="Fornavn" />
+    <input type="text" id="etternavn" placeholder="Etternavn" />
+    <input type="email" id="epost" placeholder="E-post" />
+    <input type="text" id="telefon" placeholder="Telefon (valgfritt)" />
+    <input type="text" id="verv" placeholder="Hvem vervet deg?" />
+    <button onclick="registrerBruker()">Registrer meg</button>
+    <div id="status"></div>
+  </div>
+</div>
+
+<div id="profil" class="skjerm">
+  <div class="profil-container">
+    <h2>Min profil</h2>
+    <div id="profilinfo">
+      <p>Laster data...</p>
+    </div>
+  </div>
 </div>
 
 <footer class="bunnmeny">
-  <button onclick="alert('Du er her')">Registrering</button>
-  <button onclick="alert('Profil kommer')">Profil</button>
+  <button onclick="visModul('registrering')">Registrering</button>
+  <button onclick="visModul('profil')">Profil</button>
   <button onclick="alert('Rekruttering kommer')">Rekruttering</button>
   <button onclick="alert('Kunst kommer')">Kunst</button>
   <button onclick="alert('Jobb kommer')">Jobb</button>
 </footer>
 
+<script src="profil.js"></script>
 <script>
-  function registrerBruker() {
-    const fornavn = document.getElementById("fornavn").value.trim();
-    const etternavn = document.getElementById("etternavn").value.trim();
-    const epost = document.getElementById("epost").value.trim();
-    const telefon = document.getElementById("telefon").value.trim();
-    const verv = document.getElementById("verv").value.trim();
+function visModul(modulnavn) {
+  document.querySelectorAll(".skjerm").forEach(el => el.classList.remove("vis"));
+  document.getElementById(modulnavn).classList.add("vis");
+  if (modulnavn === "profil") visProfil();
+}
 
-    if (!fornavn || !etternavn || !epost) {
-      document.getElementById("status").innerText = "Vennligst fyll ut fornavn, etternavn og e-post.";
-      return;
-    }
+function registrerBruker() {
+  const fornavn = document.getElementById("fornavn").value.trim();
+  const etternavn = document.getElementById("etternavn").value.trim();
+  const epost = document.getElementById("epost").value.trim();
+  const telefon = document.getElementById("telefon").value.trim();
+  const verv = document.getElementById("verv").value.trim();
 
-    const bruker = {
-      fornavn,
-      etternavn,
-      epost,
-      telefon,
-      verv,
-      registrert: new Date().toLocaleString()
-    };
-
-    localStorage.setItem("registrertBruker", JSON.stringify(bruker));
-    document.getElementById("status").innerText = "Registrering lagret!";
-    console.log("Registrert bruker:", bruker);
+  if (!fornavn || !etternavn || !epost) {
+    document.getElementById("status").innerText = "Fyll ut fornavn, etternavn og e-post.";
+    return;
   }
-</script>
 
+  const bruker = {
+    fornavn,
+    etternavn,
+    epost,
+    telefon,
+    verv,
+    registrert: new Date().toLocaleString()
+  };
+
+  localStorage.setItem("registrertBruker", JSON.stringify(bruker));
+  document.getElementById("status").innerText = "Registrering lagret!";
+}
+</script>
 </body>
 </html>

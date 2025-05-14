@@ -15,4 +15,3 @@ function visProfil() {
     <p><strong>Registrert:</strong> ${data.registrert}</p>
   `;
 }
-window.onload = visProfil;
