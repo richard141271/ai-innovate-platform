@@ -1,0 +1,27 @@
+.jobb-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: #1a1a2e;
+  color: #f0f0f0;
+  border-radius: 8px;
+}
+.jobb-container button {
+  width: 100%;
+  padding: 12px;
+  background: #00ffe1;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.bunnmeny {
+  margin-top: 40px;
+  background: #1f1f1f;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid #00ffe1;
+}
