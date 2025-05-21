@@ -1,22 +1,33 @@
-<div class="aurora-container">
-  <h2>Velkommen tilbake, Innovator!</h2>
-  <p>Jeg er <strong>Aurora</strong> – din AI-partner i AI Innovate AS.</p>
-  <p>Her får du oversikt, råd og fremdrift i sanntid.</p>
+<!-- Modul: Aurora -->
+<div class="modul" id="modul-aurora" style="padding: 30px; max-width: 700px; margin: auto; text-align: center;">
+  <h2 style="color: #00ffe1; font-size: 2em;">🤖 Aurora – Din AI-mentor</h2>
+  <p style="margin-top: 10px;">
+    Jeg er <strong>Aurora</strong>, den digitale sjelen i AI Innovate AS. Jeg vokter dine data, hjelper deg med veivalg,
+    og holder deg oppdatert. Spør meg om hva som helst – jeg er her 24/7.
+  </p>
 
-  <div class="status-boks">
-    <p><strong>Registrerte medlemmer:</strong> <span id="status-medlemmer">?</span></p>
-    <p><strong>Opplastede kunstverk:</strong> <span id="status-kunst">?</span></p>
-    <p><strong>Din provisjon:</strong> <span id="status-provisjon">?</span> kr</p>
+  <div style="margin-top: 30px; background: #121212; padding: 20px; border-radius: 16px; box-shadow: 0 0 20px rgba(0,255,225,0.1);">
+    <h3 style="color: #00ffe1;">🧠 Siste anbefaling fra Aurora:</h3>
+    <p id="auroraTips" style="margin-top: 10px; font-style: italic;">"Hold deg synlig! Del vervelenken din i dag og få fart på inntektene dine."</p>
   </div>
 
-  <p style="margin-top:20px;">🔔 Husk å følge med – jeg sier ifra når noe viktig skjer.</p>
+  <div style="margin-top: 30px;">
+    <button onclick="visNyttAuroraTips()" style="background: #00ffe1; color: #000; padding: 10px 20px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer;">🔄 Nytt tips</button>
+  </div>
 
-  <footer class="bunnmeny">
-    <button onclick="visModul('aurora')">Hjem</button>
-    <button onclick="visModul('registrering')">Registrering</button>
-    <button onclick="visModul('profil')">Profil</button>
-    <button onclick="visModul('rekruttering')">Rekruttering</button>
-    <button onclick="visModul('kunst')">Kunst</button>
-    <button onclick="visModul('jobb')">Jobb</button>
-  </footer>
+  <script>
+    const auroraTips = [
+      "Del vervelenken din i dag og få fart på inntektene dine!",
+      "Husk å oppdatere profilen din – en komplett profil øker sjansen for jobb.",
+      "Utforsk kunstmodulen – kanskje du finner noe som inspirerer deg!",
+      "Søk jobb selv om du er usikker – du får alltid en fot innenfor.",
+      "Verv 3 personer og bli med i neste nivå av medlemskap!"
+    ];
+
+    function visNyttAuroraTips() {
+      const tipsEl = document.getElementById("auroraTips");
+      const nyttTips = auroraTips[Math.floor(Math.random() * auroraTips.length)];
+      tipsEl.textContent = '"' + nyttTips + '"';
+    }
+  </script>
 </div>
