@@ -1,15 +1,19 @@
-<div class="jobb-container">
-  <h2>Jobb hos oss</h2>
+<div style="max-width: 500px; margin: 40px auto; padding: 20px; background: #1a1a2e; border-radius: 16px; box-shadow: 0 0 20px rgba(0,255,225,0.1);">
+  <h2 style="color: #00ffe1;">💼 Jobb hos oss</h2>
   <p>Som medlem av AI Innovate kan du starte å jobbe umiddelbart.</p>
-  <p>Første oppdrag: <strong>Rekrutter 3 personer</strong></p>
-  <button onclick="startOppdrag()">Start nå</button>
-  <div id="jobbstatus"></div>
+  <p><strong>Første oppdrag:</strong> Rekrutter 3 personer</p>
+  <button onclick="startRekruttering()" style="width: 100%; padding: 10px; background: #00ffe1; color: #000; border: none; border-radius: 8px; font-weight: bold;">Start nå</button>
+  <p id="jobbStatus" style="margin-top: 20px;"></p>
 
-  <footer class="bunnmeny">
-    <button onclick="visModul('registrering')">Registrering</button>
-    <button onclick="visModul('profil')">Profil</button>
-    <button onclick="visModul('rekruttering')">Rekruttering</button>
-    <button onclick="visModul('kunst')">Kunst</button>
-    <button onclick="visModul('jobb')">Jobb</button>
-  </footer>
+  <hr style="margin: 30px 0; border: none; border-top: 1px solid #333;" />
+
+  <h3 style="color: #00ffe1;">📄 Søk på annen stilling</h3>
+  <form onsubmit="return behandleSoknad()" style="display: flex; flex-direction: column; gap: 10px;">
+    <input type="text" id="stilling" placeholder="Ønsket stilling" required style="padding: 10px;" />
+    <textarea id="soknadstekst" placeholder="Hvorfor søker du?" required style="padding: 10px;"></textarea>
+    <input type="file" id="cv" accept=".pdf,.doc,.docx" />
+    <button type="submit" style="padding: 10px; background: #00ffe1; border: none; border-radius: 8px; font-weight: bold;">Send søknad</button>
+  </form>
+
+  <div id="soknadResultat" style="margin-top: 20px; color: #fff;"></div>
 </div>
